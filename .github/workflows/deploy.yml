@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ] # Cambialo a master si tu rama principal se llama master
+    branches: [ main ] # Si tu rama principal se llama master, cambia main por master
 
 permissions:
   contents: read
@@ -19,6 +19,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      # === AQUÍ ESTÁ EL TRUCO: Forzamos a GitHub a usar Node 22 ===
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
       - name: Install, build, and upload Astro site
         uses: withastro/action@v3
 
