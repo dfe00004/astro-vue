@@ -1,0 +1,23 @@
+---
+// import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+
+<Layout>
+	<h1>Ejemplos de Formularios en Astro + Vue</h1>
+	<p>Selecciona un ejemplo para ver la diferencia entre un formulario interactivo (isla Vue) y uno estático (solo HTML):</p>
+				<nav style="margin-top:2rem">
+					<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.5rem">
+						<li><a href="/formulario-interactivo">Formulario Interactivo (Vue)</a></li>
+						<li><a href="/formulario-estatico">Formulario Estático (Astro)</a></li>
+						<li><a href="/ejemplo-client-load">Ejemplo client:load (Contador)</a></li>
+						<li><a href="/ejemplo-client-idle">Ejemplo client:idle (Reloj)</a></li>
+						<li><a href="/ejemplo-client-visible">Ejemplo client:visible (Saludo)</a></li>
+						<li><a href="/ejemplo-client-media">Ejemplo client:media (MediaQuery)</a></li>
+					</ul>
+				</nav>
+</Layout>
